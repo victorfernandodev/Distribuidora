@@ -1,0 +1,60 @@
+﻿@model Distribuidora.Models.Distribuidor
+
+@{
+    ViewData["Title"] = "Adicionar";
+}
+
+<h4>Distribuidor</h4>
+<hr />
+<form asp-action="Create">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="NomeDistribuidor" class="control-label"></label>
+            <input asp-for="NomeDistribuidor" class="form-control" />
+            <span asp-validation-for="NomeDistribuidor" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="CNPJ" class="control-label"></label>
+            <input asp-for="CNPJ" class="form-control" id="cnpj"/>
+            <span asp-validation-for="CNPJ" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="CEP" class="control-label"></label>
+        <input asp-for="CEP" class="form-control" id="cep"/>
+        <span asp-validation-for="CEP" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Endereco" class="control-label"></label>
+        <input asp-for="Endereco" class="form-control" id="logradouro" />
+        <span asp-validation-for="Endereco" class="text-danger"></span>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Numero" class="control-label"></label>
+            <input asp-for="Numero" class="form-control" id="numero" />
+            <span asp-validation-for="Numero" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Complemento" class="control-label"></label>
+            <input asp-for="Complemento" class="form-control" />
+            <span asp-validation-for="Complemento" class="text-danger"></span>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Adicionar" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-primary">Voltar a Lista</a>
+    </div>
+
+</form>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+@* CEP *@
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="/js/CepAPI.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script type="text/javascript" src="/js/MaskCNPJ.js"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
