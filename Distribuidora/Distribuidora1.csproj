@@ -3,7 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UserSecretsId>aspnet-Distribuidora-326DCADE-961D-462D-95EB-0A22EC0E8EB3</UserSecretsId>
+    <AssemblyName>Distribuidora</AssemblyName>
+    <RootNamespace>Distribuidora</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Index.cshtml" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\img\como-montar-uma-distribuidora.jpg" />
