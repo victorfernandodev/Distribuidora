@@ -26,9 +26,12 @@
                 @Html.DisplayNameFor(model => model.Quantidade)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Caracteristica)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Distribuidor)
             </th>
-            <th></th>
+
         </tr>
     </thead>
     <tbody>
@@ -41,9 +44,11 @@
                 @Html.DisplayFor(modelItem => item.Quantidade)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Distribuidor.NomeDistribuidor)
+                @Html.DisplayFor(modelItem => item.Caracteristica)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Distribuidor.NomeDistribuidor)
+            </td>
             <td>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

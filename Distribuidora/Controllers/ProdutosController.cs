@@ -64,7 +64,7 @@ namespace Distribuidora.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeProduto,Quantidade,DistribuidorId")] Produto produto)
+        public async Task<IActionResult> Create([Bind("Id,NomeProduto,Quantidade,Caracteristica,DistribuidorId")] Produto produto)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace Distribuidora.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeProduto,Quantidade,DistribuidorId")] Produto produto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeProduto,Quantidade,Caracteristica,DistribuidorId")] Produto produto)
         {
             if (id != produto.Id)
             {

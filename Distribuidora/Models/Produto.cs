@@ -14,6 +14,8 @@ namespace Distribuidora.Models
         public string NomeProduto { get; set; }
         [Required(ErrorMessage = "É necessário preencher a Quantidade")]
         public string Quantidade { get; set; }
+        [Display(Name = "Característica")]
+        public string Caracteristica { get; set; }
         [Required(ErrorMessage = "É necessário preencher o Distribuidor")]
         [Display(Name = "Distribuidor")]
         public int DistribuidorId { get; set; }
